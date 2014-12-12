@@ -1,4 +1,4 @@
-### Items to work on:
+## Items to work on:
 - [ ] Remove the `#write` method from `MobRotator` class, simply a wrapper for puts
 - [ ] Use email addresses (rather than mobster names) to determine uniqueness
 - [ ] Names (MobRotation vs MobRotator) need clarification
@@ -7,10 +7,26 @@
 - [ ] Printed documentation does not reflect new `#random` method
 - [ ] Refactor tool commands to default to rotate.txt unless flagged otherwise
 
-### Dan's notes for work:
+## Dan's notes for work:
 - [ ] Move test helper methods (inside mob_rotation_spec.rb) into spec_helper.rb
-- [ ] asdf
 
-### Back chat questions:
-- [ ] asdf
-- [ ] asdf
+## Cool notes from Session 2:
+
+#### Let’s talk about blocks and procs:
+
+```Ruby
+@real_mobsters.each { |m| rotation_algorith.call(m) }
+@real_mobsters.each &rotation_algorithm
+```
+
+The ampersand (`&`) is a method, it calls `#to_proc` on whatever is passed in. This means that:
+
+`@real_mobsters.each &:upcase`
+
+in english, for each object in `@real_mobsters`, apply the `String#upcase` method.
+
+#### Acceptance tests vs Unit tests:
+
+A good way to differentiate between the two is to consider Acceptance tests as “Customer” tests… They represent the customer’s needs. Unit tests, on the other hand, are “Programmer” tests — they describe the implementation.
+
+Handy shortcuts: `RbConfig.ruby` will give you lots of Ruby details (whaddup)
