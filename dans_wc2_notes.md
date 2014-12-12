@@ -15,7 +15,7 @@
 #### Let’s talk about blocks and procs:
 
 ```Ruby
-@real_mobsters.each { |m| rotation_algorith.call(m) }
+@real_mobsters.each { |m| rotation_algorithm.call(m) }
 @real_mobsters.each &rotation_algorithm
 ```
 
