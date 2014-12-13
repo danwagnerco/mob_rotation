@@ -35,7 +35,7 @@ describe "mob_rotation command line tool" do
     # TODO we have no idea why this is necessary, and don't like it
     @output = nil
 
-    `MOB_GIT_DIR='./tmp/test_project/.git' #{RbConfig.ruby} #{File.join(Dir.pwd, 'mob_rotation')} #{temp_rotation_db} #{command} #{redirect}`
+    `MOB_GIT_DIR='./tmp/test_project/.git' DB_FILE='#{temp_rotation_db}' #{RbConfig.ruby} #{File.join(Dir.pwd, 'mob_rotation')}  #{command} #{redirect}`
   end
 
   def output
@@ -66,11 +66,13 @@ describe "mob_rotation command line tool" do
     it "prints out help" do
       run_rotate 'help'
       expected = ['Available commands are:',
-                  '<database txt file> help',
-                  '<database txt file> rotate',
-                  '<database txt file> add <name1> [name2]',
-                  '<database txt file> remove <name1> [name2]',
-                  '<database txt file> run_with_timer [seconds]'
+                  'show',
+                  'help',
+                  'rotate',
+                  'random',
+                  'add <name1> [name2]',
+                  'remove <name1> [name2]',
+                  'run_with_timer [seconds]'
                  ]
 
       expect(output).to eq(expected)
@@ -81,15 +83,10 @@ describe "mob_rotation command line tool" do
     it "prints out help on an unknown command" do
       run_rotate 'arbitrary'
       expected = ['Unknown command arbitrary',
-                  'Available commands are:',
-                  '<database txt file> help',
-                  '<database txt file> rotate',
-                  '<database txt file> add <name1> [name2]',
-                  '<database txt file> remove <name1> [name2]',
-                  '<database txt file> run_with_timer [seconds]'
+                  'Available commands are:'
                  ]
 
-      expect(output).to eq(expected)
+      expect(output).to include(*expected)
     end
   end
 
@@ -270,7 +267,7 @@ describe "mob_rotation command line tool" do
     end
   end
 
-  context "command: ruby mob_rotation run_with_timer n" do
+  context "command: ruby mob_rotation run_with_timer N" do
     it "it runs for a specific amount of time" do
       ts = Time.now
       run_rotate 'run_with_timer 3'
