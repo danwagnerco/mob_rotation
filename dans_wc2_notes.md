@@ -1,5 +1,4 @@
 ## Items to work on:
-- [ ] Remove the `#write` method from `MobRotator` class, simply a wrapper for puts
 - [ ] Use email addresses (rather than mobster names) to determine uniqueness
 - [ ] Names (MobRotation vs MobRotator) need clarification
 - [ ] Random and Help (plus others) are not unit tested
@@ -15,6 +14,7 @@
 
 ## Done
 - [x] Refactor tool commands to default to rotate.txt unless flagged otherwise
+- [x] Remove the `#write` method from `MobRotator` class, simply a wrapper for puts
 
 ## Back Chat questions:
 - back chat non-programming question: how important are meet-ups to the Ruby community? is an hour at a meet-up better spent than an hour on something like exercism.io?
@@ -43,3 +43,10 @@ Handy shortcuts: `RbConfig.ruby` will give you lots of Ruby details (whaddup)
 ## Cool notes from Day 3:
 
 Want to see the tmux options you have implemented? `$ tmux show-options -g status-bg`
+
+When you are stuck writing tests for a "legacy" codebase, start like this:
+
+1. Write the steps as comments, in plain English
+2. Refactor / rewrite comments as necessary
+3. Convert comments to code
+4. Delete comments
