@@ -5,10 +5,17 @@
 - [ ] Random and Help (plus others) are not unit tested
 - [ ] Acceptance tests potentially have lots of duplication to be cleaned up
 - [ ] Printed documentation does not reflect new `#random` method
-- [ ] Refactor tool commands to default to rotate.txt unless flagged otherwise
+- [x] Refactor tool commands to default to rotate.txt unless flagged otherwise
+- [ ] Clean up whitespace in database text file... what's the deal with that?
 
 ## Dan's notes for work:
 - [ ] Move test helper methods (inside mob_rotation_spec.rb) into spec_helper.rb
+
+## Rusty's feature ideas:
+- [ ] Set colors specific to driver, navigator and mobsters
+
+## Back Chat questions:
+- back chat non-programming question: how important are meet-ups to the Ruby community? is an hour at a meet-up better spent than an hour on something like exercism.io?
 
 ## Cool notes from Session 2:
 
