@@ -12,11 +12,9 @@
 
 ## Rusty's feature ideas:
 - [ ] Set colors specific to driver, navigator and mobsters
-- 
 
 ## Done
 - [x] Refactor tool commands to default to rotate.txt unless flagged otherwise
-- 
 
 ## Back Chat questions:
 - back chat non-programming question: how important are meet-ups to the Ruby community? is an hour at a meet-up better spent than an hour on something like exercism.io?
