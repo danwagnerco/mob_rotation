@@ -50,3 +50,21 @@ When you are stuck writing tests for a "legacy" codebase, start like this:
 2. Refactor / rewrite comments as necessary
 3. Convert comments to code
 4. Delete comments
+
+## Cool notes from Day 4:
+
+Want to see all the git remotes? 
+
+`$ git remote show`
+
+If you want to see all the branches, you can similarly run:
+
+`$ git branch -r`.
+
+With the gem-ified `mob_rotation` tool, the terminal command to rotate is:
+
+`$ mob_rotation rotate`
+
+Normal mobbing (not Woot Camp-specific) happens here:
+
+`mob1.rubysteps.com`
